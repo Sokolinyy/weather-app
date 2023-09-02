@@ -8,9 +8,9 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <header>
-      <nav className="flex justify-evenly py-5 text-lg">
-        <Link href="/" className="flex justify-center items-center">
-          <p className="mr-3 text-xl">Weather App</p>
+      <nav className="flex justify-evenly items-center py-5 text-lg flex-col md:flex-row">
+        <Link href="/" className="flex justify-center items-center mb-3">
+          <p className="mr-3 mt-1 text-xl">Weather App</p>
           <Image
             src={sunIcon}
             alt="Sun icon"

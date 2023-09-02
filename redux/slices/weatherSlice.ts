@@ -3,7 +3,9 @@ import { useState } from "react";
 
 const initialState: any = {
   weatherData: null,
+  weatherDataByDay: null,
   inputValue: "",
+  сityNotFound: false,
 };
 
 const weatherSlice = createSlice({
@@ -13,7 +15,13 @@ const weatherSlice = createSlice({
     setWeatherData: (state, action: PayloadAction<any>) => {
       state.weatherData = action.payload;
     },
-    setInputValue: (state, action: PayloadAction<any>) => {
+    setWeatherDataByDay: (state, action: PayloadAction<any>) => {
+      state.weatherDataByDay = action.payload;
+    },
+    setCityNotFound: (state, action: PayloadAction<any>) => {
+      state.cityNotFound = action.payload;
+    },
+    setInputValue: (state, action: PayloadAction<string>) => {
       state.inputValue = action.payload;
     },
     clearWeatherData: (state) => {
@@ -27,6 +35,8 @@ const weatherSlice = createSlice({
 
 export const {
   setWeatherData,
+  setWeatherDataByDay,
+  setCityNotFound,
   setInputValue,
   clearWeatherData,
   clearInputValue,
