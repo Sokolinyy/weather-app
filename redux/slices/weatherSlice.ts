@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { useState } from "react";
 
 const initialState: any = {
   weatherData: null,

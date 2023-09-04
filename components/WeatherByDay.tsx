@@ -1,5 +1,5 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
+"use client";
+
 import { useSelector } from "react-redux";
 
 interface ForecastDay {
