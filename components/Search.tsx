@@ -12,7 +12,9 @@ import {
   setInputValue,
   clearInputValue,
 } from "@/redux/slices/weatherSlice";
-import { ok } from "assert";
+
+import searchIcon from "@/assets/search-icon.png";
+import Image from "next/image";
 
 const Search = () => {
   const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
@@ -69,7 +71,7 @@ const Search = () => {
 
   return (
     <>
-      <div className="relative">
+      <div className="relative flex items-center">
         <input
           type="text"
           placeholder="Search your city..."
@@ -77,11 +79,14 @@ const Search = () => {
           onChange={changeInput}
           value={inputValue}
         />
-        <div>
-          <MagnifyingGlassIcon
-            className="absolute top-1 right-2 cursor-pointer"
-            width={25}
+        <div className="absolute top-1/2 -right-16 transform -translate-y-1/2 cursor-pointer">
+          <Image
+            src={searchIcon}
+            alt="search-icon"
+            width={20}
+            height={20}
             onClick={handleFetchWeatherData}
+            className="mr-20"
           />
         </div>
       </div>
