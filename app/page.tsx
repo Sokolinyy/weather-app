@@ -21,7 +21,7 @@ const WeatherDisplay = () => {
         <>
           <section>
             {weatherData ? (
-              <div className="flex text-white-100 w-auto m-1  md:w-10/12 md:m-auto justify-center items-center md:mb-1 font-bold bg-slate-700 rounded-lg p-4 justify-evenly bg-opacity-50">
+              <div className="flex text-white w-auto m-1  md:w-10/12 md:m-auto justify-center items-center md:mb-1 font-bold bg-slate-700 rounded-lg p-4 justify-evenly bg-opacity-50">
                 <p>{weatherData.location.name}</p>
                 <div className="flex-row justify-center items-center">
                   <img
