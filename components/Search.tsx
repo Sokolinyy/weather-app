@@ -78,13 +78,18 @@ const Search = () => {
           className="bg-slate-800 text-white py-1 px-14 rounded-md w-full m-1"
           onChange={changeInput}
           value={inputValue}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleFetchWeatherData();
+            }
+          }}
         />
         <div className="absolute top-1/2 -right-16 transform -translate-y-1/2 cursor-pointer">
           <Image
             src={searchIcon}
             alt="search-icon"
-            width={20}
-            height={20}
+            width={25}
+            height={25}
             onClick={handleFetchWeatherData}
             className="mr-20"
           />
