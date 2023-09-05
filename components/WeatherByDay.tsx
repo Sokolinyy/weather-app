@@ -39,7 +39,7 @@ const WeatherByDay = () => {
         forecastDays.map((day: ForecastDay, index: number) => (
           <div
             key={index}
-            className="ml-1 w-11/12 w-auto sm:w-auto md:w-10/12 md:m-auto md:mb-1 md: lg:w-10/12 lg:m-1 flex lg:flex-col h-20 lg:h-40 mt-2 mr-1 m-auto p-4 bg-slate-700 rounded-lg w-1/4 bg-opacity-70 flex-row justify-center items-center text-left"
+            className="ml-1 text-white w-11/12 w-auto sm:w-auto md:w-10/12 md:m-auto md:mb-1 md: lg:w-10/12 lg:m-1 flex lg:flex-col h-20 lg:h-40 mt-2 mr-1 m-auto p-4 bg-slate-700 rounded-lg w-1/4 bg-opacity-70 flex-row justify-center items-center text-left"
           >
             <p>{formatDate(day.date)}</p>
             <img

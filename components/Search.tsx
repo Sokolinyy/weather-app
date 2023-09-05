@@ -73,7 +73,7 @@ const Search = () => {
         <input
           type="text"
           placeholder="Search your city..."
-          className="bg-slate-800 text-white py-1 px-16 rounded-md"
+          className="bg-slate-800 text-white py-1 px-14 rounded-md w-full"
           onChange={changeInput}
           value={inputValue}
         />
